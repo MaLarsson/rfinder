@@ -1,3 +1,7 @@
-# hello-test
+# rfinder
 
-
+```bash
+npm install
+npm run build
+npm start
+```
