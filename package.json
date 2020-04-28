@@ -1,16 +1,29 @@
 {
-   "name": "hello-test",
-   "version": "0.1.0",
-   "main": "main.js",
-   "author": "Marcus Larsson <marcuslarsson_92@hotmail.com>",
-   "license": "MIT",
-   "scripts": {
-      "start": "electron .",
-      "build": "electron-build-env neon build --release"
-   },
-   "devDependencies": {
-      "electron": "^8.2.3",
-      "electron-build-env": "^0.2.0",
-      "neon-cli": "^0.4.0"
-   }
+  "name": "hello-test",
+  "version": "0.1.0",
+  "main": "main.js",
+  "author": "Marcus Larsson <marcuslarsson_92@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "start-dev": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "electron": "^8.2.3",
+    "electron-build-env": "^0.2.0",
+    "html-webpack-plugin": "^4.2.1",
+    "neon-cli": "^0.4.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
