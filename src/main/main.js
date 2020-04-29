@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require('electron')
-const addon = require('./native/index')
 
-function createWindow () {
+const createWindow = () => {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
@@ -14,8 +13,10 @@ function createWindow () {
     }
   })
 
-  // and load the index.html of the app.
-  //win.loadFile('src/index.html')
+  // register the ipc calls before loading the renderer.
+  require('./ipc').register()
+
+  // load the webpack-dev-server.
   win.loadURL('http://localhost:8080')
 }
 
@@ -40,6 +41,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.

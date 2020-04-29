@@ -5,8 +5,9 @@
   "author": "Marcus Larsson <marcuslarsson_92@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ./src/main/main.js",
     "start-dev": "webpack-dev-server --mode development --open --hot",
+    "build-native": "electron-build-env neon build --release",
     "build": "webpack --mode production"
   },
   "devDependencies": {
